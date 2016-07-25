@@ -1,0 +1,33 @@
+{
+  "name": "html-webpack-layout-plugin",
+  "version": "0.0.2",
+  "description": "Write html files and add url prefix.",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justinidlerz/html-webpack-prefix-plugin.git"
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "html-webpack-plugin",
+    "disk",
+    "template"
+  ],
+  "author": "Idler <zqc.sunny@gmail.com> (https://github.com/justinidlerz)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/justinidlerz/html-webpack-prefix-plugin/issues"
+  },
+  "homepage": "https://github.com/justinidlerz/html-webpack-prefix-plugin",
+  "devDependencies": {
+    "html-webpack-plugin": "^2.16.0",
+    "webpack": "^1.13.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
