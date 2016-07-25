@@ -1,5 +1,5 @@
 {
-  "name": "html-webpack-layout-plugin",
+  "name": "html-webpack-prefix-plugin",
   "version": "0.0.2",
   "description": "Write html files and add url prefix.",
   "main": "index.js",
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/justinidlerz/html-webpack-prefix-plugin",
   "devDependencies": {
+    "fastparse": "^1.1.1",
     "html-webpack-plugin": "^2.16.0",
     "webpack": "^1.13.0"
   },
