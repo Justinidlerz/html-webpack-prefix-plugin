@@ -1,11 +1,8 @@
 {
   "name": "html-webpack-prefix-plugin",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Write html files and add url prefix.",
   "main": "index.js",
-  "files": [
-    "index.js"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/justinidlerz/html-webpack-prefix-plugin.git"
@@ -30,5 +27,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "fastparse": "^1.1.1"
   }
 }
