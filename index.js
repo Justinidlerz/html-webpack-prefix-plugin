@@ -66,8 +66,13 @@ HtmlWebpackPrefixPlugin.prototype.addPrefix = function ( html, options ){
         html = [html];
         links.forEach(function(link) {
             if (/^http[s]?:\/\/|^\/\//i.test(link.value)) return;
-            var value = url.resolve(options.prefix, link.value);
-
+            
+            var value;
+            if (options.prefix.indexOf('.') === 0) {
+                value = path.join(options.prefix, link.value).replace(/\\/ig, '\/')
+            }else{
+                value = url.resolve(options.prefix, link.value);    
+            }
             var x = html.pop();
             html.push(x.substr(link.start + link.length));
             html.push(value);
