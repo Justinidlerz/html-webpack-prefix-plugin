@@ -1,6 +1,6 @@
 {
   "name": "html-webpack-prefix-plugin",
-  "version": "0.0.5",
+  "version": "0.1.1",
   "description": "Write html files and add url prefix.",
   "main": "index.js",
   "repository": {
