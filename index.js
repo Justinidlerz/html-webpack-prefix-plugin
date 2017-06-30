@@ -42,7 +42,7 @@ HtmlWebpackPrefixPlugin.prototype.addPrefix = function ( html, options ){
         rawLinks.forEach(function(link) {
             var length = link.length;
             var start = link.start;
-            var valueList = link.value.split(",");
+            var valueList = link.value.match(/([^,]+\s\d+\w+)/g) || [link.value];
             valueList.forEach(function(newLink) {
                 var trimmed = newLink.trim();
                 var cLength = newLink.length;
@@ -66,12 +66,12 @@ HtmlWebpackPrefixPlugin.prototype.addPrefix = function ( html, options ){
         html = [html];
         links.forEach(function(link) {
             if (/^http[s]?:\/\/|^\/\//i.test(link.value)) return;
-            
+
             var value;
             if (options.prefix.indexOf('.') === 0) {
                 value = path.join(options.prefix, link.value).replace(/\\/ig, '\/')
             }else{
-                value = url.resolve(options.prefix, link.value);    
+                value = url.resolve(options.prefix, link.value);
             }
             var x = html.pop();
             html.push(x.substr(link.start + link.length));
