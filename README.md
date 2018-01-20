@@ -1,7 +1,7 @@
 Prefix extension for the HTML-Webpack-Plugin
 ============================================
 
-Enhances [html-webpack-plugin](https://github.com/ampedandwired/html-webpack-plugin) functionality by adding the option.
+Enhances [html-webpack-plugin](https://github.com/ampedandwired/html-webpack-plugin) function by adding the options.
 ```javascript
 {
   prefix: '//example.com/', 
@@ -65,10 +65,14 @@ plugins: [
 ]  
 ```
 
-The html-webpack-prefix-plugin had default prefix attributes  
-`["img:src", "img:srcset", "img:data-src", "script:src", "link:href"]`.   
+The html-webpack-prefix-plugin had default prefix attributes options   
+  - img:src
+  - img:srcset
+  - img:data-src
+  - script:src
+  - link:href     
 
-If you want to remove and add attr you can set attributes options.
+If you want to remove and add attr you can set attributes options like so:
 
 ```javascript
 new HtmlWebpackPlugin({
@@ -89,3 +93,4 @@ new HtmlWebpackPlugin({
   attrs : ['img:url']
 })
 ```
+
