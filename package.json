@@ -13,6 +13,9 @@
     "html-webpack-plugin",
     "template"
   ],
+  "engines": {
+    "node": ">= 6.0.0"
+  },
   "author": "Idler <zqc.sunny@gmail.com> (https://github.com/justinidlerz)",
   "license": "MIT",
   "bugs": {
