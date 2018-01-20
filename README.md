@@ -1,5 +1,6 @@
+HTML-Webpack-Prefix-Plugin
+==========================
 Prefix extension for the HTML-Webpack-Plugin
-============================================
 
 Enhances [html-webpack-plugin](https://github.com/ampedandwired/html-webpack-plugin) function by adding the options.
 ```javascript
