@@ -4,8 +4,16 @@ const contentRepeat = require('./lib/contentRepeat');
 function HtmlWebpackPrefixPlugin() {}
 
 HtmlWebpackPrefixPlugin.prototype.apply = function (compiler) {
-  compiler.plugin('compilation', (compilation) => {
-    compilation.plugin('html-webpack-plugin-after-html-processing', (htmlPluginData, callback) => {
+  (compiler.hooks
+      ? compiler.hooks.compilation.tap.bind(compiler.hooks.compilation, 'html-webpack-plugin-after-html-processing')
+      : compiler.plugin.bind(compiler, 'compilation')
+  )((compilation) => {
+
+    (compilation.hooks
+        ? compilation.hooks.htmlWebpackPluginAfterHtmlProcessing.tapAsync.bind(compilation.hooks.htmlWebpackPluginAfterHtmlProcessing, 'html-webpack-plugin-after-html-processing')
+        : compilation.plugin.bind(compilation, 'html-webpack-plugin-after-html-processing')
+    )((htmlPluginData, callback) => {
+
       const newData = Object.assign(htmlPluginData, {
         html: this.addPrefix(htmlPluginData.html, htmlPluginData.plugin.options),
       });
@@ -14,7 +22,6 @@ HtmlWebpackPrefixPlugin.prototype.apply = function (compiler) {
   });
 };
 
-
 HtmlWebpackPrefixPlugin.prototype.addPrefix = function (html, options) {
   if (options.prefix) {
     const rawLinks = HTMLMatcher(html, options.attrs);
@@ -22,6 +29,5 @@ HtmlWebpackPrefixPlugin.prototype.addPrefix = function (html, options) {
   }
   return html;
 };
-
 
 module.exports = HtmlWebpackPrefixPlugin;
