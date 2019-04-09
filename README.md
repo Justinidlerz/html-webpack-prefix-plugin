@@ -1,14 +1,6 @@
 HTML-Webpack-Prefix-Plugin
 ==========================
 
-Compatibility
-=============
-
-Only compatible with Webpack 1.x and 2.x
-
-Installation
-============
-
 Prefix extension for the HTML-Webpack-Plugin
 
 Enhances [html-webpack-plugin](https://github.com/ampedandwired/html-webpack-plugin) function by adding the options.
@@ -24,6 +16,11 @@ Enhances [html-webpack-plugin](https://github.com/ampedandwired/html-webpack-plu
 
 This is an extension plugin for the [webpack](http://webpack.github.io) plugin [html-webpack-plugin](https://github.com/ampedandwired/html-webpack-plugin)  
 A plugin that simplifies the creation of HTML files to serve your webpack bundles.
+
+Compatibility
+=============
+
+Only compatible with Webpack 1.x and 2.x
 
 Installation
 ------------
