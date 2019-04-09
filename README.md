@@ -1,5 +1,14 @@
 HTML-Webpack-Prefix-Plugin
 ==========================
+
+Compatibility
+=============
+
+Only compatible with Webpack 1.x and 2.x
+
+Installation
+============
+
 Prefix extension for the HTML-Webpack-Plugin
 
 Enhances [html-webpack-plugin](https://github.com/ampedandwired/html-webpack-plugin) function by adding the options.
